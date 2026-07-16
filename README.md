@@ -1,6 +1,6 @@
 ﻿# -kbox-features
 
-### 🔧 Need to update your KBox? → **[Open the KBox Update Helper](https://iamgpio.github.io/-kbox-features/)**
+### 🔧 Need to update your KBox? → **[kbox-update.thesolomining.co](https://kbox-update.thesolomining.co)**
 
 A quick one-time step unlocks automatic updates and the latest features. The helper walks you
 through it in about 3 minutes.
