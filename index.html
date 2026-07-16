@@ -11,69 +11,65 @@
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --bg: #131315; --surface: #1c1c20; --surface2: #232328; --border: #34343b;
-    --orange: #F15800; --orange-lite: #ff7d38; --text: #f2f0ea; --dim: #9a988f;
+    --bg: #121214; --surface: #191a1c; --surface2: #202124; --border: #2c2d31;
+    --orange: #F15800; --orange-soft: #d97a44; --text: #e9e7e1; --dim: #8f8d86;
     --head: 'Russo One', system-ui, sans-serif; --body: 'Questrial', system-ui, sans-serif;
   }
   body {
-    background:
-      radial-gradient(1100px 500px at 50% -160px, rgba(241,88,0,0.16), transparent 70%),
-      var(--bg);
-    background-attachment: fixed;
-    color: var(--text); font-family: var(--body); line-height: 1.6;
-    padding: 28px 16px 64px; -webkit-font-smoothing: antialiased;
+    background: var(--bg); color: var(--text); font-family: var(--body); line-height: 1.65;
+    padding: 30px 16px 66px; -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: 640px; margin: 0 auto; }
-  header { text-align: center; margin-bottom: 6px; }
-  header img { width: 62px; height: auto; filter: drop-shadow(0 4px 14px rgba(241,88,0,0.35)); }
-  .brand { font-family: var(--head); letter-spacing: 1px; color: var(--dim); font-size: 0.72em;
-           text-transform: uppercase; margin-top: 10px; }
-  h1 { font-family: var(--head); font-size: 1.8em; margin-top: 4px; letter-spacing: 0.5px; }
+  .wrap { max-width: 620px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 8px; padding-bottom: 6px; }
+  header img { width: 52px; height: auto; opacity: 0.95; }
+  .brand { font-family: var(--head); letter-spacing: 1.5px; color: var(--dim); font-size: 0.68em;
+           text-transform: uppercase; margin-top: 12px; }
+  h1 { font-family: var(--head); font-size: 1.65em; margin-top: 6px; letter-spacing: 0.5px; font-weight: 400; }
   h1 .o { color: var(--orange); }
-  .sub { color: var(--dim); font-size: 1.02em; margin-top: 8px; }
-  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
-          padding: 22px 24px; margin-top: 18px; }
-  .card h2 { font-family: var(--head); font-size: 0.98em; letter-spacing: 0.5px; color: var(--text);
-             margin-bottom: 10px; display: flex; align-items: center; }
-  .step-num { display: inline-flex; width: 30px; height: 30px; border-radius: 9px; flex: 0 0 30px;
-              background: linear-gradient(135deg, var(--orange), var(--orange-lite)); color: #fff;
+  .sub { color: var(--dim); font-size: 1em; margin-top: 8px; }
+  .rule { height: 2px; width: 44px; background: var(--orange); margin: 16px auto 0; border-radius: 2px; opacity: 0.85; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+          padding: 20px 22px; margin-top: 16px; }
+  .card h2 { font-family: var(--head); font-size: 0.92em; letter-spacing: 0.5px; color: var(--text);
+             margin-bottom: 10px; display: flex; align-items: center; font-weight: 400; }
+  .step-num { display: inline-flex; width: 28px; height: 28px; border-radius: 8px; flex: 0 0 28px;
+              background: var(--surface2); border: 1px solid var(--border); color: var(--orange);
               font-family: var(--head); align-items: center; justify-content: center; margin-right: 11px;
-              font-size: 0.95em; box-shadow: 0 3px 10px rgba(241,88,0,0.4); }
-  p { color: #d9d7cf; }
+              font-size: 0.85em; }
+  p { color: #c9c7c0; }
   label { display: block; color: var(--dim); font-size: 0.9em; margin: 4px 0; }
-  input[type=text] { width: 100%; padding: 14px 15px; border-radius: 11px; border: 1px solid var(--border);
-                     background: #0f0f11; color: var(--text); font-size: 1.15em; font-family: monospace;
+  input[type=text] { width: 100%; padding: 13px 14px; border-radius: 10px; border: 1px solid var(--border);
+                     background: #0e0e10; color: var(--text); font-size: 1.12em; font-family: monospace;
                      letter-spacing: 0.5px; }
-  input[type=text]:focus { outline: none; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(241,88,0,0.18); }
+  input[type=text]:focus { outline: none; border-color: var(--orange);
+                           box-shadow: 0 0 0 2px rgba(241,88,0,0.12); }
   .os-tabs { display: flex; gap: 8px; margin: 4px 0 14px; }
-  .os-tab { flex: 1; padding: 11px; border-radius: 11px; border: 1px solid var(--border); font-family: var(--head);
-            background: #0f0f11; color: var(--dim); cursor: pointer; text-align: center; font-size: 0.85em;
+  .os-tab { flex: 1; padding: 10px; border-radius: 10px; border: 1px solid var(--border); font-family: var(--head);
+            background: #0e0e10; color: var(--dim); cursor: pointer; text-align: center; font-size: 0.8em;
             letter-spacing: 0.5px; }
-  .os-tab.on { border-color: var(--orange); color: var(--orange); box-shadow: 0 0 10px rgba(241,88,0,0.25); }
-  .cmd-box { background: #0b0b0d; border: 1px solid var(--orange); border-radius: 11px; padding: 15px;
-             margin: 10px 0; overflow-x: auto; box-shadow: inset 0 0 24px rgba(241,88,0,0.06); }
-  .cmd-box code { color: #ffb488; font-family: monospace; font-size: 0.9em; white-space: pre; }
-  .copy-btn { display: block; width: 100%; margin-top: 10px; padding: 15px; border-radius: 11px; border: none;
-              background: linear-gradient(135deg, var(--orange), var(--orange-lite)); color: #fff;
-              font-family: var(--head); font-size: 1.02em; letter-spacing: 0.5px; cursor: pointer;
-              box-shadow: 0 4px 16px rgba(241,88,0,0.35); }
+  .os-tab.on { border-color: var(--orange); color: var(--text); }
+  .cmd-box { background: #0b0b0d; border: 1px solid var(--border); border-radius: 10px; padding: 14px;
+             margin: 10px 0; overflow-x: auto; }
+  .cmd-box code { color: #cbb79f; font-family: monospace; font-size: 0.88em; white-space: pre; }
+  .copy-btn { display: block; width: 100%; margin-top: 10px; padding: 14px; border-radius: 10px; border: none;
+              background: var(--orange); color: #fff; font-family: var(--head); font-size: 0.98em;
+              letter-spacing: 0.5px; cursor: pointer; }
+  .copy-btn:hover { background: #d94f00; }
   .copy-btn:active { transform: translateY(1px); }
-  .copy-btn.copied { background: #2c9c3a; box-shadow: 0 4px 16px rgba(44,156,58,0.35); }
+  .copy-btn.copied { background: #3a7d43; }
   ol { margin: 6px 0 0 4px; padding-left: 22px; } ol li { margin-bottom: 8px; }
-  .warnbox { background: rgba(241,88,0,0.09); border: 1px solid var(--orange); border-radius: 11px;
-             padding: 11px 15px; margin-top: 13px; color: #ffb488; font-size: 0.92em; }
-  .pill { display: inline-block; background: #0f0f11; border: 1px solid var(--border); border-radius: 6px;
-          padding: 1px 8px; font-family: monospace; color: var(--orange-lite); }
+  .warnbox { background: var(--surface2); border: 1px solid var(--border); border-left: 3px solid var(--orange);
+             border-radius: 8px; padding: 11px 15px; margin-top: 13px; color: #c9c7c0; font-size: 0.92em; }
+  .pill { display: inline-block; background: #0e0e10; border: 1px solid var(--border); border-radius: 6px;
+          padding: 1px 8px; font-family: monospace; color: var(--orange-soft); }
   details { margin-top: 12px; }
-  summary { cursor: pointer; color: var(--orange-lite); font-size: 0.95em; font-family: var(--head);
-            letter-spacing: 0.3px; }
+  summary { cursor: pointer; color: var(--orange-soft); font-size: 0.9em; }
   details p, details li { color: var(--dim); font-size: 0.92em; margin-top: 6px; }
   .feat { list-style: none; padding: 0; margin-top: 8px; }
-  .feat li { padding-left: 26px; position: relative; margin-bottom: 6px; color: var(--text); }
-  .feat li::before { content: "▸"; color: var(--orange); position: absolute; left: 4px; }
-  footer { text-align: center; color: var(--dim); font-size: 0.85em; margin-top: 28px; font-family: var(--head);
-           letter-spacing: 0.5px; }
-  footer a { color: var(--orange); text-decoration: none; }
+  .feat li { padding-left: 24px; position: relative; margin-bottom: 6px; color: var(--text); }
+  .feat li::before { content: "▸"; color: var(--orange); position: absolute; left: 4px; opacity: 0.85; }
+  footer { text-align: center; color: var(--dim); font-size: 0.82em; margin-top: 28px; letter-spacing: 0.3px; }
+  footer a { color: var(--orange-soft); text-decoration: none; }
   .hidden { display: none; }
 </style>
 </head>
@@ -84,6 +80,7 @@
     <div class="brand">The Solo Mining Co&#39;</div>
     <h1>Update your <span class="o">KBox</span></h1>
     <div class="sub">A quick one-time step unlocks automatic updates &amp; a big new feature release.</div>
+    <div class="rule"></div>
   </header>
 
   <div class="card">
@@ -127,7 +124,7 @@
     <h2><span class="step-num">4</span>Done!</h2>
     <p>You'll see a few lines ending in <i>"updated … rebooting"</i>, then the window closes — that
       means it <b>worked</b>. Wait ~2 minutes, then open your KBox dashboard again. From now on,
-      <b>Check for updates</b> works normally and you never need to do this again. 🎉</p>
+      <b>Check for updates</b> works normally and you never need to do this again.</p>
 
     <details>
       <summary>Something went wrong?</summary>
